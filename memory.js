@@ -136,10 +136,20 @@ function PlayMemory (playerNames, cardNames) {
         console.log (firstSelectedCardName, secondSelectedCardName);
         if (firstSelectedCardName==secondSelectedCardName) {
             console.log ("twee gelijke kaarten");
+            this.match
+            return Player.score++;
+            setTimeout(this.emptyPosition, 5000);
         }
         else {
             console.log ("twee verschillende kaarten");
+            //start timer
+            // return cards to not visible
+            //switch players
+            //new turn
         }
+    this.emptyPosition = function() {
+    console.log("after timeout")
+    }
 }
 
            /* controleer of kaartje 1 hetzelfde is als kaartje 2 */
@@ -156,6 +166,7 @@ function PlayMemory (playerNames, cardNames) {
 
 
         /* geef huidige speler een punt */
+
         /* wacht 5 seconden */
         /* haal beide kaartjes weg */
             /* controleer of alle kaartjes weggehaald zijn */
