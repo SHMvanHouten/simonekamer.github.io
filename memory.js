@@ -147,7 +147,8 @@ function MemoryGame(playerNames, cardNames, shuffleMachine, visualiser) {
         if (firstSelectedCardName==secondSelectedCardName) {
             console.log ("twee gelijke kaarten");
             // wacht 5 seconden = 5000
-            window.setTimeout (function (){handleSituationWhenBothCardsAreIdentical()},1000);
+            return handleSituationWhenBothCardsAreIdentical();
+//            window.setTimeout (function (){handleSituationWhenBothCardsAreIdentical()},1000);
         }
         else {
             console.log ("twee verschillende kaarten");
