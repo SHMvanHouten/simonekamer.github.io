@@ -169,7 +169,6 @@ function MemoryGame(playerNames, cardNames, shuffleMachine, visualiser) {
        switchActivePlayer();
     }
 
-<<<<<<< HEAD
     this.compareCards = function (){
         console.log (firstSelectedCardName, secondSelectedCardName);
         if (firstSelectedCardName==secondSelectedCardName) {
@@ -189,7 +188,6 @@ function MemoryGame(playerNames, cardNames, shuffleMachine, visualiser) {
     console.log("after timeout")
     }
 }
-=======
     var emptyPositions = function () {
         firstSelectedPosition.emptyPosition();
         secondSelectedPosition.emptyPosition();
@@ -217,7 +215,6 @@ function MemoryGame(playerNames, cardNames, shuffleMachine, visualiser) {
 
 
 
->>>>>>> 8b5679d901614e80ef5787176a9e774ad760a549
 
     var initGame = function () {
     /* haal lijst van spelers op*/
@@ -253,36 +250,6 @@ function MemoryGame(playerNames, cardNames, shuffleMachine, visualiser) {
     initGame ();
 
 
-      //   if alle kaartjes zijn weggehaald: buiten de while loop
-        /* benoem een winnaar */
-        /* vraag of ze het nog een keer willen spelen */
-
-
-
-<<<<<<< HEAD
-        /* geef huidige speler een punt */
-
-        /* wacht 5 seconden */
-        /* haal beide kaartjes weg */
-            /* controleer of alle kaartjes weggehaald zijn */
-//            if alle kaartjes zijn weggehaald
-            /* benoem een winnaar */
-            /* vraag of ze het nog een keer willen spelen */
-//            }
-//            else {
-            /* nieuwe beurt */
-            /* firstCard = true*/
-//           }
-//        }
-//        else {
-        /* wacht 5 seconden */
-        /* draai beide kaartjes om (terug)*/
-        /* wissel speler */
-        /* nieuwe beurt */
-//        }
-//  }
-=======
->>>>>>> 8b5679d901614e80ef5787176a9e774ad760a549
 }
 
 MemoryGame.prototype.selectPosition = function selectPosition(index){
