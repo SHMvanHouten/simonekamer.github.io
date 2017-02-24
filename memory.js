@@ -217,7 +217,7 @@ function MemoryGame(playerNames, cardNames, shuffleMachine, visualiser) {
         indexOfActivePlayer = 0;
     /*zet score van alle spelers op 0 */
         visualiser.createScoreboard(players);
-
+        visualiser.createPlayingField(positions.length);
     };
 
     var createPlayers = function (playerName){

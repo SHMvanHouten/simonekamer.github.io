@@ -38,5 +38,28 @@ Visualiser.prototype.createScoreboard = function(players){
 };
 Visualiser.prototype.updateScoreOfActivePlayer = function (playerIndex,score) {
     document.getElementById("playerscore" + playerIndex).innerHTML = score;
-    }
+}
+Visualiser.prototype.createPlayingField = function(numberOfCards){
+    var playingField = document.createElement("div");
+    playingField.className = "board container-fluid";
+    var body = document.getElementsByTagName("body")[0];
+    for(var i = 0; i < numberOfCards / 6; i++){
+        var row = document.createElement("div");
+        row.className = "row";
+        row.id = "row" + i;
+        this.createCardPositions(i, row);
+        playingField.appendChild(row);
+    };
+    body.appendChild(playingField)
+}
+Visualiser.prototype.createCardPositions = function(i, row){
+    for (var j = 0; j<6; j++){
+        var position = document.createElement("div");
+        position.className = "position col-md-2";
+        position.id = "row " + i + " position" + j;
+        row.appendChild(position)
+//        position.addEventListener("click", memoryGame.position(i*6 + j, false))
+    };
+};
+
 // show score
