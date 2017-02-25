@@ -224,7 +224,7 @@ function MemoryGame(playerNames, cardNames, shuffleMachine, visualiser) {
     var addClickEvent = function(){
         for (let i = 0; i < positions.length; i++){
             var cardPosition = document.getElementById("image"+i);
-            cardPosition.addEventListener("click", function(){selectPosition(i);}, true);
+            cardPosition.addEventListener("click", function(){selectPosition(i);}, false);
         };
     };
 
