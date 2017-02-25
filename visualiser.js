@@ -62,7 +62,6 @@ Visualiser.prototype.createCardPositions = function(i, row){
         image.className = "memorykrt";
         image.id = "image" + (i*6 + j);
         position.appendChild(image);
-//        image.addEventListener("click", function(){MemoryGame.prototype.tryFunction();}, false)
     };
 };
 

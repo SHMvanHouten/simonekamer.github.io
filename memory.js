@@ -262,10 +262,6 @@ function MemoryGame(playerNames, cardNames, shuffleMachine, visualiser) {
 
 
 }
-MemoryGame.prototype.tryFunction = function(){
-    console.log("hi");
-}
-
 
 MemoryGame.prototype.getNameOfActivePlayer = function getNameOfActivePlayer() {
     return this.getNameOfActivePlayer();
