@@ -56,9 +56,13 @@ Visualiser.prototype.createCardPositions = function(i, row){
     for (var j = 0; j<6; j++){
         var position = document.createElement("div");
         position.className = "position col-md-2";
-        position.id = "row " + i + " position" + j;
         row.appendChild(position)
-//        position.addEventListener("click", memoryGame.position(i*6 + j, false))
+        var image = document.createElement("img");
+        image.src = "images/achterkant.jpg";
+        image.className = "memorykrt";
+        image.id = "image" + (i*6 + j);
+        position.appendChild(image);
+//        image.addEventListener("click", function(){MemoryGame.prototype.tryFunction();}, false)
     };
 };
 
