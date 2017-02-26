@@ -100,11 +100,11 @@ function MemoryGame(playerNames, cardNames, shuffleMachine, visualiser) {
         players[indexOfActivePlayer].addPointToScore();
     }
 
-    var isPositionOccupied = function (index){
+    this.isPositionOccupied = function (index){
         return positions[index].isOccupied();
     };
 
-    var processPosition = function (selectedIndex){
+    this.processPosition = function (selectedIndex){
         if (imBusy){
             return;
         }
@@ -218,14 +218,6 @@ function MemoryGame(playerNames, cardNames, shuffleMachine, visualiser) {
     /*zet score van alle spelers op 0 */
         visualiser.createScoreboard(players);
         visualiser.createPlayingField(positions.length);
-        addClickEvent();
-    };
-
-    var addClickEvent = function(){
-        for (let i = 0; i < positions.length; i++){
-            var cardPosition = document.getElementById("image"+i);
-            cardPosition.addEventListener("click", function(){selectPosition(i);}, false);
-        };
     };
 
     var createPlayers = function (playerName){
@@ -244,14 +236,7 @@ function MemoryGame(playerNames, cardNames, shuffleMachine, visualiser) {
        }
        return positions;
    };
-    var selectPosition = function selectPosition(index){
-       if (isPositionOccupied(index)){
-           processPosition(index);
-       }
-       else {
-           console.log ("lege plek gekozen");
-       }
-    }
+
     initGame ();
 
 
@@ -263,6 +248,14 @@ function MemoryGame(playerNames, cardNames, shuffleMachine, visualiser) {
 
 }
 
+MemoryGame.prototype.selectPosition = function selectPosition(index){
+        if (this.isPositionOccupied(index)){
+            this.processPosition(index);
+        }
+        else {
+            console.log ("lege plek gekozen");
+        }
+    }
 MemoryGame.prototype.getNameOfActivePlayer = function getNameOfActivePlayer() {
     return this.getNameOfActivePlayer();
 }
