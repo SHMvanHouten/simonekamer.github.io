@@ -68,6 +68,7 @@ function MemoryGame(playerNames, cardNames, shuffleMachine, visualiser) {
     var indexOfCard1;
     var indexOfCard2;
     var imBusy;
+    var that = this;
 
 /* dupliceer alle kaartjes*/
    this.createPositions = function (cardNames){
@@ -217,7 +218,7 @@ function MemoryGame(playerNames, cardNames, shuffleMachine, visualiser) {
         indexOfActivePlayer = 0;
     /*zet score van alle spelers op 0 */
         visualiser.createScoreboard(players);
-        visualiser.createPlayingField(positions.length);
+        visualiser.createPlayingField(positions.length, that);
     };
 
     var createPlayers = function (playerName){

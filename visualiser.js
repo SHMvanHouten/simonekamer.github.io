@@ -39,7 +39,7 @@ Visualiser.prototype.createScoreboard = function(players){
 Visualiser.prototype.updateScoreOfActivePlayer = function (playerIndex,score) {
     document.getElementById("playerscore" + playerIndex).innerHTML = score;
 }
-Visualiser.prototype.createPlayingField = function(numberOfCards){
+Visualiser.prototype.createPlayingField = function(numberOfCards, that){
     var playingField = document.createElement("div");
     playingField.className = "board container-fluid";
     var body = document.getElementsByTagName("body")[0];
@@ -47,12 +47,12 @@ Visualiser.prototype.createPlayingField = function(numberOfCards){
         var row = document.createElement("div");
         row.className = "row";
         row.id = "row" + i;
-        this.createCardPositions(i, row);
+        this.createCardPositions(i, row, that);
         playingField.appendChild(row);
     };
     body.appendChild(playingField)
 }
-Visualiser.prototype.createCardPositions = function(i, row){
+Visualiser.prototype.createCardPositions = function(i, row, that){
     for (let j = 0; j<6; j++){
         var position = document.createElement("div");
         position.className = "position col-md-2";
@@ -63,7 +63,7 @@ Visualiser.prototype.createCardPositions = function(i, row){
         image.className = "memorykrt";
         image.id = "image" + (i*6 + j);
         position.appendChild(image);
-       image.addEventListener("click", function(){game.selectPosition(i*6 + j);}, false)
+       image.addEventListener("click", function(){that.selectPosition(i*6 + j);}, false)
 
     };
 };
